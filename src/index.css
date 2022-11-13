@@ -1,13 +1,43 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+	font-family: var(--paragraphFonts);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--headerFonts);
+}
+
+:root {
+	--black: rgb(0, 0, 0);
+	--light-black: rgb(129, 118, 118);
+	--white: rgb(255, 255, 255);
+	--light-grey: hsla(0, 0%, 100%, 0.7);
+	--light-grey-header: rgb(204, 204, 204);
+	--dark-grey: hsla(0, 0%, 100%, 0.3);
+	--progress-bar-color: hsla(0, 0%, 68.7%, 0.5);
+	--image-cover: rgba(86, 86, 86, 0.5);
+	--image-cover-hover: rgba(122, 121, 121, 0.5);
+	--error-message: rgb(206, 8, 8);
+	--black-hover: rgb(71, 69, 69);
+	--grey-background: rgb(244, 246, 245);
+	--paragraphFonts: 'Roboto Mono', san-serif;
+	--headerFonts: 'Amiri', san-serif;
+}
+
+.ql-align-right {
+	text-align: right;
+}
+.ql-align-center {
+	text-align: center;
+}
+.ql-align-left {
+	text-align: left;
 }

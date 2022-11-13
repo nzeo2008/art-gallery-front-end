@@ -1,0 +1,35 @@
+.page_container {
+	min-height: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lost_content_container {
+	text-align: center;
+	border: 3px solid var(--black);
+	padding: 20px;
+	min-width: 700px;
+	max-height: max-content;
+}
+
+.lost_content_container * {
+	margin: 0px;
+}
+
+.lost_content_container img {
+	height: 300px;
+	width: 300px;
+}
+
+@media screen and (max-width: 800px) {
+	.lost_content_container {
+		min-width: 250px;
+		margin: 0px 10px;
+	}
+
+	.lost_content_container img {
+		height: 150px;
+		width: 150px;
+	}
+}

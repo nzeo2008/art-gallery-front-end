@@ -1,0 +1,35 @@
+.my_editor {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.quill {
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+.my_editor * {
+	box-sizing: border-box;
+}
+
+.my_editor label {
+	margin-bottom: 10px;
+}
+
+.editor_error_message {
+	height: 30px;
+	color: var(--error-message);
+	font-size: 15px;
+}
+
+.editor_error_message h4 {
+	margin: 0px;
+}
+
+@media screen and (max-width: 520px) {
+	.editor_error_message {
+		font-size: 14px;
+		height: 100%;
+	}
+}

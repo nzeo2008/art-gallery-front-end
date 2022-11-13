@@ -1,0 +1,17 @@
+.text_section {
+	padding: 130px 0px;
+	text-align: center;
+}
+
+.text_container {
+	margin: 0px auto;
+	max-width: 840px;
+}
+
+.text_container h2 {
+	font-size: 32px;
+	letter-spacing: 0.6px;
+	line-height: 1.2em;
+	font-weight: 700;
+	margin: 0px;
+}

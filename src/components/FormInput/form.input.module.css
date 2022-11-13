@@ -1,0 +1,47 @@
+.form_element {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.form_element input {
+	font-size: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	outline: none;
+	border-radius: 5px;
+	display: block;
+	border: 1px solid var(--light-black);
+	transition-duration: 0.1s;
+}
+
+.form_element input:focus {
+	box-shadow: 0 0 0 1px var(--black);
+}
+
+label {
+	font-size: 20px;
+	font-family: var(--headerFonts);
+	background-color: black;
+	color: var(--white);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.error_message {
+	height: 25px;
+	color: var(--error-message);
+	font-size: 14px;
+}
+
+.error_message h4 {
+	margin: 0px;
+}
+
+@media screen and (max-width: 520px) {
+	.error_message {
+		font-size: 14px;
+		height: 100%;
+	}
+}

@@ -1,0 +1,69 @@
+.section_container {
+	display: flex;
+	padding-bottom: 130px;
+	flex-direction: column;
+}
+.section_container h1 {
+	text-align: center;
+}
+
+.artists_image_container {
+	display: flex;
+}
+
+.image_container {
+	width: 25%;
+	height: 380px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.image_container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition-duration: 0.5s;
+}
+
+.image_hidden_text {
+	display: none;
+}
+
+.image_container:hover img {
+	transform: scale(1.05);
+}
+
+.image_container:hover .image_hidden_text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: var(--image-cover);
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	color: white;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+	.artists_image_container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.image_container {
+		width: 50%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.image_container {
+		width: 100%;
+	}
+}

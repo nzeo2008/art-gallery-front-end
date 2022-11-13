@@ -1,0 +1,42 @@
+.banner {
+	display: flex;
+	height: 600px;
+	width: 100%;
+	justify-content: center;
+	position: relative;
+}
+
+.banner img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.banner_card {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+}
+
+.banner_header h1 {
+	margin: 0px;
+	font-size: 70px;
+	color: var(--white);
+	font-family: var(--headerFonts);
+}
+
+@media screen and (max-width: 1200px) {
+	.banner_card {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.banner {
+		height: 1200px;
+	}
+}

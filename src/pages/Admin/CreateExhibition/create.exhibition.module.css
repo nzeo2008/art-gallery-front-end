@@ -1,0 +1,67 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.container h2 {
+	margin: auto;
+}
+
+.add_artist_button {
+	background-color: var(--white);
+	border: 1px solid var(--black);
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-family: var(--headerFonts);
+	cursor: pointer;
+	transition: 0.2s all ease-in-out;
+	width: 200px;
+}
+
+.add_artist_button:hover {
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.add_artist_button_no_hover {
+	background-color: var(--white);
+	border: 1px solid var(--black);
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-family: var(--headerFonts);
+	width: 200px;
+}
+
+.add_artist_container {
+	display: flex;
+	column-gap: 20px;
+	align-items: center;
+}
+
+.data_length_container {
+	font-family: var(--paragraphFonts);
+	margin-bottom: 10px;
+}
+
+.data_length_container p {
+	font-size: 18px;
+}
+
+.data_length_container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.icon {
+	margin-bottom: 0px;
+	vertical-align: middle;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+.icon svg {
+	font-size: 25px;
+	margin-bottom: 0px;
+}

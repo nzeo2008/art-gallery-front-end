@@ -1,0 +1,127 @@
+.trending_section {
+	padding: 130px 60px;
+	position: relative;
+	flex-direction: column;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.trending_section a:last-child {
+	display: block;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 20px;
+	margin-top: 60px;
+	text-align: center;
+	transition: 0.3s all ease-in-out;
+}
+
+.trending_section a:last-child:hover {
+	color: var(--black-hover);
+}
+
+.trending_section a:hover {
+	color: var(--black-hover);
+}
+
+.trending_exhibition_main_container {
+	display: flex;
+	column-gap: 60px;
+	flex-wrap: wrap;
+	row-gap: 30px;
+	justify-content: center;
+}
+
+.trending_exhibitions_container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	width: 500px;
+	max-width: 1000px;
+}
+
+.trending_exhibition {
+	display: flex;
+	column-gap: 10px;
+	row-gap: 10px;
+}
+
+.trending_exhibition p {
+	margin: 0px;
+	min-width: 100px;
+	font-weight: 700;
+}
+
+.trending_exhibition .trending_text p {
+	margin: 0px;
+	font-weight: 500;
+}
+
+.trending_text {
+	width: 100%;
+	height: 105px;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-align: justify;
+}
+
+.trending_text p * {
+	background-color: transparent !important;
+}
+
+.trending_text a {
+	display: block;
+	max-width: max-content;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 25px;
+	margin-bottom: 10px;
+	transition: 0.3s all ease-in-out;
+}
+
+.logo_image_container {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.logo_image_container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.2;
+}
+
+.trending_section h2 {
+	font-size: 50px;
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+	.trending_exhibitions_container {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.trending_section {
+		padding: 130px 20px;
+	}
+
+	.trending_section h2 {
+		font-size: 35px;
+	}
+
+	.trending_exhibition {
+		flex-direction: column;
+	}
+}

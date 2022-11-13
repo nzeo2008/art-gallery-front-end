@@ -1,0 +1,170 @@
+.container {
+	display: inline-block;
+	margin-bottom: 30px;
+	box-shadow: 0 10px 30px 0 rgb(0 0 0 / 9%);
+	max-width: 400px;
+	position: relative;
+}
+
+.image_container {
+	height: 250px;
+}
+
+.image_container img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.text_container {
+	padding: 20px;
+	text-decoration: none;
+}
+
+.text_container h2 {
+	margin: 0px;
+}
+
+.text_container a {
+	text-decoration: none;
+	color: var(--black);
+	font-family: var(--headerFonts);
+}
+
+.article_container {
+	height: 170px;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin: 10px 0px;
+}
+
+.link {
+	font-size: 22px;
+}
+
+.link,
+.text_container h2,
+.image_container,
+.image_container img {
+	transition: 0.3s all ease-in-out;
+}
+
+.link:hover,
+.text_container h2:hover {
+	color: var(--black-hover);
+}
+
+.image_container a {
+	height: 100%;
+}
+
+.image_container:hover {
+	background-color: var(--image-cover);
+}
+
+.image_container img {
+	position: relative;
+	z-index: -1;
+}
+
+.article {
+	text-align: justify;
+	font-size: 18px;
+	line-height: 1.7em;
+}
+
+.delete_button {
+	cursor: pointer;
+	z-index: 5;
+	background-color: var(--black);
+	color: var(--white);
+	font-size: 30px;
+	border: none;
+	transition: 0.3s all ease-in-out;
+	box-sizing: border-box;
+	font-weight: 700;
+	width: 40px;
+	pointer-events: auto;
+}
+
+.delete_button:hover {
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.delete_button_container {
+	position: absolute;
+	top: 10px;
+	right: -5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+}
+
+.delete_button_container::after {
+	content: 'Удалить';
+	background-color: var(--black);
+	color: var(--white);
+	font-size: 18px;
+	padding: 5px;
+	transform: translateY(5px);
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.1s all ease;
+}
+
+.delete_button_container:hover::after {
+	transform: translateY(10px);
+	visibility: visible;
+	opacity: 1;
+	transition: 0.1s 0.5s all ease;
+}
+
+.icon {
+	cursor: pointer;
+	font-size: 30px;
+	padding: 5px;
+	transition: 0.3s all ease-in-out;
+	color: var(--white);
+	background-color: var(--black);
+	pointer-events: auto;
+}
+
+.icon_container {
+	position: absolute;
+	top: 10px;
+	left: -20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	pointer-events: none;
+}
+
+.icon_container::after {
+	content: 'Редактировать';
+	font-size: 18px;
+	background-color: var(--black);
+	padding: 5px;
+	color: var(--white);
+	transform: translateY(5px);
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.1s all ease;
+}
+
+.icon_container:hover::after {
+	transform: translateY(10px);
+	visibility: visible;
+	opacity: 1;
+	transition: 0.1s 0.5s all ease;
+}
+
+.icon:hover {
+	background-color: var(--white);
+	color: var(--black);
+}

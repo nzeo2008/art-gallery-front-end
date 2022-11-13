@@ -1,0 +1,61 @@
+.section_container {
+	background-color: var(--grey-background);
+}
+
+.artist_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 40px 60px;
+	column-gap: 40px;
+	row-gap: 40px;
+	max-width: 1400px;
+	margin: 0px auto;
+	min-height: 400px;
+	align-items: center;
+}
+
+.artist_container h1 {
+	font-size: 40px;
+}
+
+.searchbar_container {
+	padding: 0px 60px;
+	padding-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.searchbar {
+	width: 35%;
+	transition: 0.2s all ease-in-out;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	outline: none;
+	border-radius: 5px;
+	display: block;
+	border: 1px solid var(--light-black);
+}
+
+.searchbar:focus {
+	width: 70%;
+	box-shadow: 0 0 0 1px var(--black);
+}
+
+@media screen and (max-width: 650px) {
+	.searchbar {
+		width: 80%;
+	}
+
+	.searchbar:focus {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.artist_container {
+		padding: 40px 20px;
+	}
+}

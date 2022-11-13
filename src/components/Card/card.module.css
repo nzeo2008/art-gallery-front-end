@@ -1,0 +1,33 @@
+.card_container {
+	display: flex;
+	background-color: var(--white);
+	padding: 20px;
+	margin: 5px;
+	flex-direction: column;
+	box-shadow: 0 10px 50px 0 rgb(53 82 99 / 9%);
+	transition-duration: 0.5s;
+	max-width: 380px;
+}
+
+.card_container h3 {
+	font-family: var(--headerFonts);
+	font-size: 23px;
+	margin: 5px;
+}
+
+.card_container p {
+	font-family: var(--paragraphFonts);
+	font-size: 14px;
+	margin: 5px;
+}
+
+.card_container:hover {
+	scale: 1.03;
+}
+
+.card_text {
+	display: flex;
+	align-items: center;
+	margin: 10px;
+	column-gap: 10px;
+}

@@ -1,0 +1,14 @@
+.cards_container {
+	display: flex;
+	column-gap: 30px;
+	row-gap: 30px;
+	flex-wrap: wrap;
+	padding: 40px 60px;
+	justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+	.cards_container {
+		padding: 40px 20px;
+	}
+}

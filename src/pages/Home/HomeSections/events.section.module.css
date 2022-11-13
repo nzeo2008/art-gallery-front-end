@@ -1,0 +1,112 @@
+.events_section {
+	display: grid;
+	grid-template-areas:
+		'first-1 second-1 third-1 third-1'
+		'first-2 second-2 second-2 third-2'
+		'first-3 first-3 second-3 third-3';
+	column-gap: 15px;
+	row-gap: 15px;
+}
+
+.event_image_container {
+	width: 100%;
+	height: 300px;
+	position: relative;
+}
+
+.black_box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	transition: 0.4s all ease-in-out;
+}
+
+.event_image_container:hover .black_box {
+	background-color: var(--black);
+}
+
+.event_image_container img {
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+
+.event_text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+
+.event_text a {
+	visibility: hidden;
+	color: var(--white);
+	text-decoration: none;
+	transition: 0.3s all ease-in-out;
+}
+
+.event_text a:hover {
+	color: var(--black-hover);
+}
+
+.event_text a:first-child {
+	font-size: 20px;
+}
+
+.event_text a:last-child {
+	font-size: 35px;
+}
+
+.event_image_container:hover .event_text a {
+	visibility: visible;
+}
+
+.events_section div:nth-child(1) {
+	grid-area: first-1;
+}
+
+.events_section div:nth-child(2) {
+	grid-area: second-1;
+}
+
+.events_section div:nth-child(3) {
+	grid-area: third-1;
+}
+
+.events_section div:nth-child(4) {
+	grid-area: first-2;
+}
+
+.events_section div:nth-child(5) {
+	grid-area: second-2;
+}
+
+.events_section div:nth-child(6) {
+	grid-area: third-2;
+}
+
+.events_section div:nth-child(7) {
+	grid-area: first-3;
+}
+
+.events_section div:nth-child(8) {
+	grid-area: second-3;
+}
+
+.events_section div:nth-child(9) {
+	grid-area: third-3;
+}
+
+@media screen and (max-width: 900px) {
+	.events_section {
+		display: flex;
+		flex-direction: column;
+	}
+}

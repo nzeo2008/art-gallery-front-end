@@ -1,0 +1,131 @@
+.investments {
+	display: flex;
+	padding-bottom: 130px;
+	width: 100%;
+	justify-content: center;
+}
+
+.investments h6 {
+	font-size: 18px;
+	margin: 0px;
+}
+
+.investments_container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	margin: 0px 125px;
+	max-width: 1200px;
+}
+
+.investments_header {
+	font-size: 26px;
+	width: 50%;
+	margin-right: 40px;
+}
+
+.progress_bar {
+	margin-bottom: 30px;
+}
+
+.progress_bar_container {
+	width: 50%;
+	max-width: 480px;
+}
+.progress_bar_wrapper {
+	width: 100%;
+}
+
+.grey_line {
+	width: 100%;
+	height: 4px;
+	background-color: var(--progress-bar-color);
+}
+
+.dot {
+	position: absolute;
+	left: auto;
+	top: auto;
+	right: 0%;
+	bottom: -4px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #000;
+}
+
+.number {
+	position: absolute;
+	bottom: 12px;
+	font-family: var(--headerFonts);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.black_line_1 {
+	width: 96%;
+	height: 4px;
+	background-color: var(--black);
+	position: relative;
+}
+
+.black_line_2 {
+	width: 82%;
+	height: 4px;
+	background-color: var(--black);
+	position: relative;
+}
+
+.black_line_3 {
+	width: 90%;
+	height: 4px;
+	background-color: var(--black);
+	position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+	.investments_container {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+	}
+
+	.investments_header {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.progress_bar_container {
+		width: 100%;
+		max-width: 530px;
+		margin-top: 20px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.investments_header {
+		width: 100%;
+	}
+	.progress_bar_container {
+		width: 450px;
+		margin-top: 20px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.investments_header {
+		width: 100%;
+	}
+	.progress_bar_container {
+		width: 300px;
+		margin-top: 20px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
