@@ -110,7 +110,7 @@ function CreateExhibition() {
 
 			await updateData(api.updateExhibitionEndpoint, formData);
 
-			toastUpdate(id, 'Событие успешно обновлено', 'success');
+			toastUpdate(id, 'Выставка успешно обновлена', 'success');
 
 			navigate('/exhibitions', { replace: true });
 		} catch (ex) {
@@ -130,7 +130,7 @@ function CreateExhibition() {
 			const formData = await createFormData(newData);
 			await createData(api.createExhibitionEndpoint, formData);
 
-			toastUpdate(id, 'Событие успешно создано', 'success');
+			toastUpdate(id, 'Выставка успешно создана', 'success');
 			resetForm();
 			clearAndFetchData();
 		} catch (ex) {

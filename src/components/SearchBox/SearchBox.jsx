@@ -62,12 +62,12 @@ function SearchBox(props) {
 							onChange={(e) => {
 								handleSearch(e);
 							}}
-							placeholder='Type artist name'
+							placeholder='Введите имя деятеля искусства'
 						/>
 						<CustomButton
 							handleClick={onCloseAndClear}
 							style={styles.close_button}
-							name='Close'
+							name='Закрыть'
 						/>
 					</div>
 					<div className={styles.data_container}>
@@ -90,7 +90,7 @@ function SearchBox(props) {
 						})}
 					</div>
 					<CustomButton
-						name='Confirm'
+						name='Подтвердить'
 						style={styles.confirm_button}
 						handleClick={confirmData}
 					/>

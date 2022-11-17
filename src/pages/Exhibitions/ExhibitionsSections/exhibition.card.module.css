@@ -1,6 +1,6 @@
 .card_container {
 	width: 450px;
-	height: 610px;
+	max-height: 700px;
 
 	position: relative;
 }
@@ -24,7 +24,7 @@
 }
 
 .card_container h3 {
-	font-size: 40px;
+	font-size: 30px;
 	transition: 0.3s all ease-in-out;
 }
 

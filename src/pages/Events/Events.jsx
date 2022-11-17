@@ -62,7 +62,7 @@ function Events({ events, user, setEvents }) {
 		} catch (ex) {
 			if (ex.response && ex.response.status >= 400 && ex.response.status <= 499) {
 				setEvents(events);
-				toastUpdate(toastId, 'Событие не удалось удалить', 'error');
+				toastUpdate(toastId, 'Статью не удалось удалить', 'error');
 			} else {
 				setEvents(events);
 				toastUpdate(toastId, 'Произошла непредвиденная ошибка', 'error');
@@ -72,7 +72,7 @@ function Events({ events, user, setEvents }) {
 
 	return (
 		<>
-			<Banner imagePath={bannerLogo} from='События' altName='Location-Banner.jpg' />
+			<Banner imagePath={bannerLogo} from='Статьи' altName='Location-Banner.jpg' />
 			<div className={styles.container}>
 				<div className={styles.items_container}>
 					{events.length !== 0 ? (
@@ -98,10 +98,10 @@ function Events({ events, user, setEvents }) {
 						<LostContent />
 					)}
 				</div>
-				{events.length >= endIndex && (
+				{events.length > endIndex && (
 					<CustomButton handleClick={nextPage} style={styles.button} name='Дальше' />
 				)}
-				{events.length < endIndex && startIndex !== 0 && (
+				{events.length <= endIndex && startIndex !== 0 && (
 					<CustomButton
 						handleClick={goBack}
 						style={styles.button}

@@ -131,14 +131,14 @@ function Exhibitions({ exhibitions, user, setExhibitions }) {
 									);
 								})}
 							</div>
-							{exhibitions.length >= endIndex && (
+							{exhibitions.length > endIndex && (
 								<CustomButton
 									handleClick={nextPage}
 									style={styles.button}
 									name='Дальше'
 								/>
 							)}
-							{exhibitions.length < endIndex && startIndex !== 0 && (
+							{exhibitions.length <= endIndex && startIndex !== 0 && (
 								<CustomButton
 									handleClick={goBack}
 									style={styles.button}

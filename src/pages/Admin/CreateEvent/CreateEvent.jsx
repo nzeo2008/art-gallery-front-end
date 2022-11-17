@@ -49,12 +49,12 @@ function CreateEvent() {
 			const formData = await createFormData(data);
 			await updateData(api.updateEventEndpoint, formData);
 
-			toastUpdate(id, 'Событие успешно обновлено', 'success');
+			toastUpdate(id, 'Статья успешно обновлена', 'success');
 
 			navigate('/events', { replace: true });
 		} catch (ex) {
 			if (ex.response && ex.response.status >= 400 && ex.response.status <= 499) {
-				toastUpdate(id, 'Обновление события не удалось', 'error');
+				toastUpdate(id, 'Обновление статьи не удалось', 'error');
 			} else {
 				toastUpdate(id, 'Произошла непредвиденная ошибка', 'error');
 			}
@@ -67,7 +67,7 @@ function CreateEvent() {
 			const formData = await createFormData(data);
 			await createData(api.createEventEndpoint, formData);
 
-			toastUpdate(id, 'Событие успешно создано', 'success');
+			toastUpdate(id, 'Статья успешно создана', 'success');
 
 			resetForm();
 		} catch (ex) {
@@ -81,7 +81,7 @@ function CreateEvent() {
 
 	return (
 		<div className={styles.container}>
-			<h2>Создать событие</h2>
+			<h2>Создать статью</h2>
 			<Form
 				initialValues={initialValues}
 				initialErrors={initialErrors}

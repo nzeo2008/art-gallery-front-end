@@ -22,7 +22,7 @@ function Navbar({ user }) {
 						Главная
 					</Link>
 					<Link to='events' className={styles.low_header_nav_link}>
-						События
+						Статьи
 					</Link>
 					<Link to='exhibitions' className={styles.low_header_nav_link}>
 						Выставки

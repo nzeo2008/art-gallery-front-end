@@ -15,10 +15,12 @@ import LostContent from './../LostContent/LostContent';
 import parse from 'html-react-parser';
 import { createFormDataForEvents, getData, updateData } from '../../services/admin.services';
 import { toastLoading, toastUpdate } from './../../services/toasts.service';
+import LoadingSpinner from './../LoadingSpinner/LoadingSpinner';
 
 function Event({ events, user }) {
 	const location = useLocation();
-
+	const [isLoading, setIsLoading] = useState(true);
+	const [pageLoading, setPageLoading] = useState(true);
 	const [changeIcon, setChangeIcon] = useState(false);
 
 	const navigate = useNavigate();
@@ -36,21 +38,32 @@ function Event({ events, user }) {
 	});
 
 	useEffect(() => {
-		checkEvent(eventPage.currentPage.alias);
-	}, [eventPage.currentPage]);
-
-	useEffect(() => {
 		if (events.length !== 0) {
 			const resIndex = events.findIndex((item) => item.alias === params.alias);
 			resIndex !== -1 ? setIndex(resIndex) : setIndex(-2);
 		}
 		if (events.length !== 0 && index >= 0) {
 			setLocation(events, index);
+			setIsLoading(false);
 			scrollOnTop();
 		} else if (!location.state && index === -2) {
 			navigate('not-found', { replace: true });
 		}
-	}, [index, events, params]);
+	}, [index, events]);
+
+	useEffect(() => {
+		if (isLoading) return;
+		checkEvent(eventPage.currentPage.alias);
+	}, [isLoading, eventPage.currentPage]);
+
+	async function checkEvent(alias) {
+		const result = await getData(api.searchEventFromUserEndpoint, { alias });
+		setPageLoading(false);
+		if (!result.data) {
+			return setChangeIcon(false);
+		}
+		return setChangeIcon(true);
+	}
 
 	async function saveEvent(email, event) {
 		const toastId = toastLoading();
@@ -89,14 +102,6 @@ function Event({ events, user }) {
 		}
 	}
 
-	async function checkEvent(alias) {
-		const result = await getData(api.searchEventFromUserEndpoint, { alias });
-		if (!result.data) {
-			return setChangeIcon(false);
-		}
-		return setChangeIcon(true);
-	}
-
 	function setLocation(events, index) {
 		if (events && events.length !== 1) {
 			if (index === 0) {
@@ -126,7 +131,7 @@ function Event({ events, user }) {
 		}
 	}
 
-	return events.length !== 0 && index >= 0 ? (
+	return !pageLoading ? (
 		<main className={styles.top_container}>
 			<section className={styles.side_container}>
 				<div className={styles.event_container}>
@@ -137,7 +142,13 @@ function Event({ events, user }) {
 						{events[index].category}
 					</Link>
 					{user && (
-						<div className={styles.bookmark_icon_container}>
+						<div
+							className={
+								changeIcon
+									? styles.bookmark_icon_container_black
+									: styles.bookmark_icon_container_white
+							}
+						>
 							<FontAwesomeIcon
 								icon={changeIcon ? faBookmarkBlack : faBookmarkWhite}
 								className={styles.icon}
@@ -150,7 +161,7 @@ function Event({ events, user }) {
 							/>
 						</div>
 					)}
-					<h1>{events[index].title}</h1>
+					<h1 className={styles.title}>{events[index].title}</h1>
 					<p className={styles.date}>
 						{format(parseISO(events[index].createdAt), 'dd/MM/yyyy')}
 					</p>
@@ -167,6 +178,9 @@ function Event({ events, user }) {
 								relative='path'
 								onClick={() => {
 									setIndex(eventPage.previousIndex);
+									setChangeIcon(false);
+									setIsLoading(true);
+									setPageLoading(true);
 								}}
 								className={styles.next_section_link}
 							>
@@ -183,6 +197,9 @@ function Event({ events, user }) {
 								state={{ index: eventPage.nextIndex, events }}
 								onClick={() => {
 									setIndex(eventPage.nextIndex);
+									setChangeIcon(false);
+									setIsLoading(true);
+									setPageLoading(true);
 								}}
 								relative='path'
 								replace={true}
@@ -200,7 +217,7 @@ function Event({ events, user }) {
 			</section>
 		</main>
 	) : (
-		<LostContent />
+		<LoadingSpinner />
 	);
 }
 

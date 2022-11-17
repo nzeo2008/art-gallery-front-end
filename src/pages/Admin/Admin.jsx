@@ -63,7 +63,7 @@ function Admin() {
 					onClick={() => dispatch({ type: 'event' })}
 					className={currentState === 'event' ? styles.active : ''}
 				>
-					Создать событие
+					Создать статью
 				</NavLink>
 				<NavLink
 					onClick={() => dispatch({ type: 'exhibition' })}

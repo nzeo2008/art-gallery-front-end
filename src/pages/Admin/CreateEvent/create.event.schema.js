@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-const validPattern = /^[a-zа-яA-ZА-Я0-9!,@#$%&* ]{0,}$/;
+const validPattern = /^[a-zа-яA-ZА-Я0-9!,-@#$%&ё* ]{0,}$/;
 
 export const schema = Joi.object({
 	_id: Joi.optional(),
