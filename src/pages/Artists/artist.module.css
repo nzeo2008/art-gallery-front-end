@@ -167,12 +167,6 @@
 		min-width: 200px;
 	}
 
-	.avatar_container img {
-		height: 100%;
-		width: 100%;
-		object-fit: fill;
-	}
-
 	.header h1 {
 		font-size: 35px;
 		margin-bottom: 20px;
