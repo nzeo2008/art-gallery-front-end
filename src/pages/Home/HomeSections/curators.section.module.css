@@ -1,7 +1,6 @@
 .curators_cards_section {
 	padding: 130px 90px;
 	max-width: 1420px;
-	margin: 0px auto;
 }
 
 .curators_container {
@@ -16,6 +15,9 @@
 .curator_card {
 	text-align: center;
 	transition: 0.4s all ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .curator_card:hover {
@@ -38,10 +40,15 @@
 	font-size: 20px;
 }
 
+.curatots_card_image_container {
+	height: 350px;
+	max-width: 350px;
+}
+
 .curatots_card_image_container img {
 	height: 100%;
 	width: 100%;
-	object-fit: fill;
+	object-fit: cover;
 	transition: 0.5s all ease-in-out;
 }
 
@@ -62,9 +69,20 @@
 	text-align: justify;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	.curators_cards_section {
 		padding: 130px 20px;
+		margin: 0px;
+	}
+
+	.curators_cards_section h2 {
+		font-size: 30px;
+		margin: 5px 0px;
+	}
+
+	.curatots_card_image_container {
+		height: 250px;
+		max-width: 250px;
 	}
 
 	.curators_cards_section .curator_card h2 {
@@ -75,5 +93,11 @@
 @media screen and (max-width: 600px) {
 	.curators_container {
 		flex-direction: column;
+	}
+
+	.curatots_card_image_container {
+		height: 350px;
+		width: 350px;
+		max-width: 350px;
 	}
 }

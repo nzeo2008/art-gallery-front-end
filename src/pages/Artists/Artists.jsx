@@ -1,10 +1,8 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import bannerLogo from '../../images/Artists-2.jpg';
 import Banner from '../../components/Banner/Banner';
 import styles from './artists.module.css';
 import { api } from './../../config';
 import { useNavigate } from 'react-router-dom';
-
 import { toastLoading, toastUpdate } from './../../services/toasts.service';
 import { deleteData } from '../../services/admin.services';
 import { scrollOnTop } from '../../services/common.service';
@@ -85,7 +83,11 @@ function Artists({ artists, user, setArtists }) {
 
 	return (
 		<main>
-			<Banner imagePath={bannerLogo} from='Деятели искусства' altName='Location-Banner.jpg' />
+			<Banner
+				imagePath='/images/Artists-2.jpg'
+				from='Деятели искусства'
+				altName='Artists-2.jpg'
+			/>
 			<section className={styles.section_container}>
 				<div className={styles.searchbar_container}>
 					<input

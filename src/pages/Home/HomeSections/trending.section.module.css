@@ -124,4 +124,8 @@
 	.trending_exhibition {
 		flex-direction: column;
 	}
+
+	.trending_text {
+		text-align: start;
+	}
 }

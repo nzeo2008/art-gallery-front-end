@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import cardImage1 from '../../../images/TrippleCard-1.jpg';
-import cardImage2 from '../../../images/TrippleCard-2.jpg';
-import cardImage3 from '../../../images/TrippleCard-3.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import styles from './trippleCard.module.css';
@@ -23,7 +20,7 @@ function TrippleCard() {
 				</div>
 				<div className={styles.card_wrapper}>
 					<div className={styles.card}>
-						<img src={cardImage1} alt='TrippleCard-1.jpg' />
+						<img src='images/TrippleCard-1.jpg' alt='TrippleCard-1.jpg' />
 						<div className={styles.text}>
 							<h6>Что мы делаем</h6>
 							<p>Мы организуем выставки и открытые соревнования по всему миру.</p>
@@ -40,7 +37,7 @@ function TrippleCard() {
 						</div>
 					</div>
 					<div className={styles.middle_card}>
-						<img src={cardImage2} alt='TrippleCard-2.jpg' />
+						<img src='images/TrippleCard-2.jpg' alt='TrippleCard-2.jpg' />
 						<div className={styles.text}>
 							<h6>Кому мы помогаем</h6>
 							<p>Мы помогаем новым талантам представить своё творчество аудитории.</p>
@@ -57,7 +54,7 @@ function TrippleCard() {
 						</div>
 					</div>
 					<div className={styles.card}>
-						<img src={cardImage3} alt='TrippleCard-3.jpg' />
+						<img src='images/TrippleCard-3.jpg' alt='TrippleCard-3.jpg' />
 						<div className={styles.text}>
 							<h6>Почему выбирают нас</h6>
 							<p>

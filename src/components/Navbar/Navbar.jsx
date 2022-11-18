@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo-art.png';
 import styles from './navbar.module.css';
 import { useState } from 'react';
 import LoginForm from '../../pages/LoginForm/LoginForm';
@@ -15,7 +14,7 @@ function Navbar({ user }) {
 		<>
 			<div className={styles.navbar}>
 				<Link to='/' className={styles.header_logo}>
-					<img src={logo} alt='logo-art.png' />
+					<img src='/images/logo-art.png' alt='logo-art.png' />
 				</Link>
 				<div className={styles.low_header_container}>
 					<Link to='/' className={styles.low_header_nav_link}>

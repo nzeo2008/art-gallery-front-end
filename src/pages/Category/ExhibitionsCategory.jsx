@@ -7,7 +7,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { scrollOnTop } from './../../services/common.service';
 import ExhibitionCard from '../Exhibitions/ExhibitionsSections/ExhibitionCard';
 import LoadingSpinner from './../LoadingSpinner/LoadingSpinner';
-import logo from '../../images/Free-image-1.jpg';
 
 function Category() {
 	const [exhibitions, setExhibitions] = useState([]);
@@ -34,7 +33,11 @@ function Category() {
 
 	return (
 		<>
-			<Banner from={params.category} imagePath={logo} altName={params.category} />
+			<Banner
+				from={params.category}
+				imagePath='/images/Free-image-1.jpg'
+				altName='Free-image-1.jpg'
+			/>
 			{!isLoading ? (
 				<section className={styles.cards_container}>
 					{exhibitions.map((exhibition) => {

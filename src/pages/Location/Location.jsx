@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import Banner from '../../components/Banner/Banner';
 import Card from '../../components/Card/Card';
-import bannerLogo from '../../images/Free-image-3.jpg';
-import locationInfoLogo from '../../images/Art-rafiki.png';
 import styles from './location.module.css';
 import { scrollOnTop } from './../../services/common.service';
 
@@ -13,7 +11,11 @@ function Location() {
 
 	return (
 		<div className={styles.location}>
-			<Banner imagePath={bannerLogo} from='Где мы находимся' altName='Location-Banner.jpg' />
+			<Banner
+				imagePath='images/Free-image-3.jpg'
+				from='Где мы находимся'
+				altName='Location-Banner.jpg'
+			/>
 			<div className={styles.container}>
 				<h1>Посети нашу уникальную галерею</h1>
 				<div className={styles.cards}>
@@ -45,7 +47,7 @@ function Location() {
 			</div>
 			<div className={styles.location_info}>
 				<div className={styles.location_info_image}>
-					<img src={locationInfoLogo} alt='Art-rafiki.png' />
+					<img src='images/Art-rafiki.png' alt='Art-rafiki.png' />
 				</div>
 				<div className={styles.location_info_container}>
 					<div className={styles.contacts_info}>

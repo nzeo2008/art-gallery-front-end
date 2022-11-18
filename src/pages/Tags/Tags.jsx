@@ -7,7 +7,6 @@ import { api } from './../../config';
 import ArtistCard from '../Artists/ArtistsSections/ArtistCard';
 import ExhibitionCard from './../Exhibitions/ExhibitionsSections/ExhibitionCard';
 import Banner from './../../components/Banner/Banner';
-import logo from '../../images/Free-image-1.jpg';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 function Tags() {
@@ -49,7 +48,7 @@ function Tags() {
 
 	return (
 		<>
-			<Banner from={params.tags} imagePath={logo} altName={params.tags} />
+			<Banner from={params.tags} imagePath='/images/Free-image-1.jpg' altName={params.tags} />
 			{!isArtistsLoading && !isExhibitionsLoading ? (
 				<section className={styles.main_container}>
 					<section className={styles.container}>

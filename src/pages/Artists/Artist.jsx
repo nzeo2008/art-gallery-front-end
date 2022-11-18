@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTags } from '@fortawesome/free-solid-svg-icons';
 import ImageZoom from '../../components/ImageZoom/ImageZoom';
 import CustomButton from '../../components/Button/CustomButton';
-import defaultAvatar from '../../images/default_avatar.jpg';
 
 function Artist({ artists }) {
 	const location = useLocation();
@@ -51,7 +50,11 @@ function Artist({ artists }) {
 						<div className={styles.avatar_container}>
 							<img
 								loading='lazy'
-								src={artist.avatar ? api.baseUrl + artist.avatar : defaultAvatar}
+								src={
+									artist.avatar
+										? api.baseUrl + artist.avatar
+										: '/images/default_avatar.jpg'
+								}
 								alt={artist.name}
 							/>
 						</div>

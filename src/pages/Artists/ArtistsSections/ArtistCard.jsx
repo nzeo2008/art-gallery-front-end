@@ -6,7 +6,6 @@ import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { scrollOnTop } from './../../../services/common.service';
 import { api } from './../../../config';
-import defaultAvatar from '../../../images/default_avatar.jpg';
 
 function ArtistCard({ lastArtistRef, user, handleDelete, handleUpdate, artist }) {
 	return (
@@ -42,7 +41,7 @@ function ArtistCard({ lastArtistRef, user, handleDelete, handleUpdate, artist })
 				state={artist}
 			>
 				<img
-					src={artist.avatar ? api.baseUrl + artist.avatar : defaultAvatar}
+					src={artist.avatar ? api.baseUrl + artist.avatar : '/images/default_avatar.jpg'}
 					loading='lazy'
 					alt=''
 				/>

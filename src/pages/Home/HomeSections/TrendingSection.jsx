@@ -2,16 +2,18 @@ import React from 'react';
 import { format, parseISO } from 'date-fns';
 import ru from 'date-fns/locale/ru';
 import parse from 'html-react-parser';
-import trending_logo from '../../../images/trending.jpg';
 import styles from './trending.section.module.css';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
+import LoadingSpinner from './../../LoadingSpinner/LoadingSpinner';
 
 function TrendingSection({ exhibitions }) {
-	return (
+	return exhibitions.length === 0 ? (
+		<LoadingSpinner />
+	) : (
 		<section className={styles.trending_section}>
 			<div className={styles.logo_image_container}>
-				<img src={trending_logo} alt={trending_logo} />
+				<img src='images/trending.jpg' alt='trending.jpg' />
 			</div>
 			<div className={styles.wrapper}>
 				<h2>Будущие выставки</h2>

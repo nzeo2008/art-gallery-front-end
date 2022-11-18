@@ -6,7 +6,6 @@ import { api } from './../../config';
 import { scrollOnTop } from './../../services/common.service';
 import { format, parseISO } from 'date-fns';
 import Banner from '../../components/Banner/Banner';
-import logo from '../../images/Free-image-1.jpg';
 import LoadingSpinner from './../LoadingSpinner/LoadingSpinner';
 import EventCard from './../Events/EventsSections/EventCard';
 
@@ -35,7 +34,11 @@ function EventsCategory() {
 
 	return (
 		<>
-			<Banner from={params.category} imagePath={logo} altName={params.category} />
+			<Banner
+				from={params.category}
+				imagePath='/images/Free-image-1.jpg'
+				altName='Free-image-1.jpg'
+			/>
 			{!isLoading ? (
 				<section className={styles.cards_container}>
 					{events.map((item) => {

@@ -168,6 +168,6 @@
 
 	.card_container {
 		width: 450px;
-		height: 620px;
+		height: max-content;
 	}
 }

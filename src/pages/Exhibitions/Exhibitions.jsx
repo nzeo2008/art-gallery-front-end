@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import bannerLogo from '../../images/Exhibitions-Banner.jpg';
 import Banner from '../../components/Banner/Banner';
 import LostContent from './../LostContent/LostContent';
 import _ from 'lodash';
@@ -73,7 +72,11 @@ function Exhibitions({ exhibitions, user, setExhibitions }) {
 
 	return (
 		<>
-			<Banner imagePath={bannerLogo} from='Выставки' altName='Location-Banner.jpg' />
+			<Banner
+				imagePath='images/Exhibitions-Banner.jpg'
+				from='Выставки'
+				altName='Location-Banner.jpg'
+			/>
 			{exhibitions.length !== 0 ? (
 				<main className={styles.container}>
 					<section className={styles.main_section}>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { getData } from '../../services/admin.services';
 import styles from './user.profile.module.css';
 import { api } from './../../config';
-import avatar from '../../images/default_avatar.jpg';
 import { format, parseISO } from 'date-fns';
 import LoadingSpinner from './../LoadingSpinner/LoadingSpinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -40,7 +39,10 @@ function UserProfile({ user }) {
 							<div className={styles.container}>
 								<div className={styles.header_container}>
 									<div className={styles.image_container}>
-										<img src={avatar} alt={avatar} />
+										<img
+											src='images/default_avatar.jpg'
+											alt='default_avatar.jpg'
+										/>
 									</div>
 									<div className={styles.text_info}>
 										<div>

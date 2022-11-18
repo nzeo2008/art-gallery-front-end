@@ -33,7 +33,7 @@
 
 .image_container a {
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 40px;
 	color: var(--white);
 	padding: 5px;
 	border: 1px solid var(--white);
@@ -105,6 +105,10 @@
 	}
 
 	.text_image_container span {
+		font-size: 35px;
+	}
+
+	.image_container a {
 		font-size: 35px;
 	}
 }

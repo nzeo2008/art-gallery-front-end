@@ -1,6 +1,5 @@
 import { format } from 'date-fns';
 import React, { useState, useEffect } from 'react';
-import logo from '../../images/footer-logo.png';
 import styles from './footer.module.css';
 import _ from 'lodash';
 import EventsSection from './FooterSections/EventsSection';
@@ -17,7 +16,7 @@ function Footer({ events }) {
 		<div className={styles.footer}>
 			<div className={styles.footer_container}>
 				<div className={styles.general_info}>
-					<img src={logo} alt='footer-logo' />
+					<img src='/images/footer-logo.png' alt='footer-logo' />
 					<InfoSection
 						firstParagraph='Кутузовский проспект, д.3'
 						secondParagraph='Москва, Moscow 101'
@@ -68,7 +67,7 @@ function Footer({ events }) {
 					/>
 				</section>
 				<section className={styles.events_info}>
-					<h5 className={styles.paragraph_header}>События</h5>
+					<h5 className={styles.paragraph_header}>Статьи</h5>
 					<div className={styles.images_container}>
 						{slicedEvents.map((randomEvent, index) => {
 							return (

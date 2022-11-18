@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import bannerLogo from '../../images/Events-2.jpg';
 import Banner from '../../components/Banner/Banner';
 import { deleteData } from '../../services/admin.services';
 import { api } from './../../config';
@@ -72,7 +71,7 @@ function Events({ events, user, setEvents }) {
 
 	return (
 		<>
-			<Banner imagePath={bannerLogo} from='Статьи' altName='Location-Banner.jpg' />
+			<Banner imagePath='images/Events-2.jpg' from='Статьи' altName='Location-Banner.jpg' />
 			<div className={styles.container}>
 				<div className={styles.items_container}>
 					{events.length !== 0 ? (

@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './info.section.module.css';
-import location_logo from '../../../images/Location-Banner.jpg';
-import aboutus_logo from '../../../images/Events-Banner.jpg';
 import { Link } from 'react-router-dom';
 
 function InfoSection() {
@@ -9,7 +7,7 @@ function InfoSection() {
 		<section className={styles.info_section}>
 			<div className={styles.images_container}>
 				<div className={styles.image_container}>
-					<img src={location_logo} alt={location_logo} />
+					<img src='images/Location-Banner.jpg' alt='Location-Banner.jpg' />
 
 					<div className={styles.shadow_box}> </div>
 					<div className={styles.text_image_container}>
@@ -18,7 +16,7 @@ function InfoSection() {
 					</div>
 				</div>
 				<div className={styles.image_container}>
-					<img src={aboutus_logo} alt={aboutus_logo} />
+					<img src='images/Events-Banner.jpg' alt='Events-Banner.jpg' />
 					<div className={styles.shadow_box}></div>
 					<div className={styles.text_image_container}>
 						<span>Узнай о нас больше</span>

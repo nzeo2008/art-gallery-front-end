@@ -3,9 +3,12 @@ import _ from 'lodash';
 import styles from './events.section.module.css';
 import { Link } from 'react-router-dom';
 import { api } from './../../../config';
+import LoadingSpinner from '../../LoadingSpinner/LoadingSpinner';
 
 function EventsSection({ events }) {
-	return (
+	return events === 0 ? (
+		<LoadingSpinner />
+	) : (
 		<section className={styles.events_section}>
 			{_.slice(events, 0, 9).map((event) => {
 				return (

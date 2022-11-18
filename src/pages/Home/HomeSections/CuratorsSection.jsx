@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './curators.section.module.css';
-import first_curator_logo from '../../../images/Curators/first_curator.jpg';
-import second_curator_logo from '../../../images/Curators/second_curator.jpg';
-import third_curator_logo from '../../../images/Curators/third_curator.jpg';
 
 function CuratorsSection() {
 	return (
@@ -18,25 +15,25 @@ function CuratorsSection() {
 			<div className={styles.curators_container}>
 				<div className={styles.curator_card}>
 					<div className={styles.curatots_card_image_container}>
-						<img src={first_curator_logo} alt={first_curator_logo} />
+						<img src='images/Curators/first_curator.jpg' alt='first_curator.jpg' />
 					</div>
 					<span>Помощник куратора</span>
-					<h2>Louis Toadvine</h2>
+					<h2>Антон Беляев</h2>
 				</div>
 				<div className={styles.curator_card}>
 					<div className={styles.curatots_card_image_container}>
-						<img src={second_curator_logo} alt={second_curator_logo} />
+						<img src='images/Curators/second_curator.jpg' alt='second_curator.jpg' />
 					</div>
 					<span>Главный куратор</span>
-					<h2>Oedipa Mass</h2>
+					<h2>Олеся Мазур</h2>
 				</div>
 				<div className={styles.curator_card}>
 					<div className={styles.curatots_card_image_container}>
-						<img src={third_curator_logo} alt={third_curator_logo} />
+						<img src='images/Curators/third_curator.jpg' alt='third_curator.jpg' />
 						<div className={styles.card_shadow_box}></div>
 					</div>
 					<span>Приглашённый помощник</span>
-					<h2>Tyrone Di Presso</h2>
+					<h2>Тайрон Ди Прессо</h2>
 				</div>
 			</div>
 		</section>

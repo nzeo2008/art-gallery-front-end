@@ -11,7 +11,6 @@ import { faBookmark as faBookmarkWhite } from '@fortawesome/free-regular-svg-ico
 import { api } from './../../config';
 import { scrollOnTop } from './../../services/common.service';
 import { format, parseISO } from 'date-fns';
-import LostContent from './../LostContent/LostContent';
 import parse from 'html-react-parser';
 import { createFormDataForEvents, getData, updateData } from '../../services/admin.services';
 import { toastLoading, toastUpdate } from './../../services/toasts.service';
@@ -186,7 +185,7 @@ function Event({ events, user }) {
 							>
 								<FontAwesomeIcon icon={faArrowLeft} className={styles.arrow} />
 								<div className={styles.left_text}>
-									<p>Предыдущее событие</p>
+									<p>Предыдущая статья</p>
 									<h6>{eventPage.previousPage.title}</h6>
 								</div>
 							</Link>
@@ -206,7 +205,7 @@ function Event({ events, user }) {
 								className={styles.next_section_link}
 							>
 								<div className={styles.right_text}>
-									<p>Следующее событие</p>
+									<p>Следующая статья</p>
 									<h6>{eventPage.nextPage.title}</h6>
 								</div>
 								<FontAwesomeIcon icon={faArrowRight} className={styles.arrow} />
