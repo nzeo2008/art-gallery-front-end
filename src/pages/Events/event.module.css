@@ -145,10 +145,12 @@
 	text-align: justify;
 }
 
+.text_section * {
+	margin: 0px;
+}
+
 .text_section p,
 .text_section span {
-	margin-top: 10px;
-	margin-bottom: 10px;
 	color: var(--black);
 	font-size: 16px;
 	line-height: 1.7em;
@@ -159,10 +161,11 @@
 	text-decoration: none;
 	color: var(--black);
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: center;
 	margin-top: 60px;
 	transition: 0.25s all ease-in-out;
+	column-gap: 10px;
 }
 
 .next_section_link:hover {
@@ -195,19 +198,21 @@
 	padding: 10px;
 }
 
-.left_text {
+.left_text * {
 	text-align: left;
-	padding: 10px;
 }
 
-.right_text {
+.right_text * {
 	text-align: right;
-	padding: 10px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	.bookmark_icon_container_white {
 		right: 0px;
+	}
+
+	.event_container h1 {
+		font-size: 40px;
 	}
 
 	.bookmark_icon_container_black {
@@ -219,13 +224,19 @@
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 	.event_container {
 		padding: 60px 20px;
+		display: flex;
+		flex-direction: column;
 	}
 
-	.event_container h1 {
-		font-size: 40px;
+	.bookmark_icon_container_white {
+		position: initial;
+	}
+
+	.bookmark_icon_container_black {
+		position: initial;
 	}
 
 	.next_section_link h6 {
@@ -240,6 +251,10 @@
 		font-size: 12px;
 	}
 
+	.arrow_container {
+		column-gap: 10px;
+	}
+
 	.arrow_container a:first-child {
 		display: flex;
 		flex-direction: column;
@@ -249,13 +264,21 @@
 		flex-direction: column-reverse;
 	}
 
-	.left_text,
-	.right_text {
-		padding: 0px;
+	.side_container {
+		padding: 0px 0px;
+	}
+
+	.left_text * {
 		text-align: center;
 	}
 
-	.side_container {
-		padding: 0px 0px;
+	.right_text * {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.event_container h1 {
+		font-size: 30px;
 	}
 }

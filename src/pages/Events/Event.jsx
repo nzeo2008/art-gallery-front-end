@@ -134,12 +134,6 @@ function Event({ events, user }) {
 		<main className={styles.top_container}>
 			<section className={styles.side_container}>
 				<div className={styles.event_container}>
-					<Link
-						to={`../category/events/${events[index].category}`}
-						className={styles.category_link}
-					>
-						{events[index].category}
-					</Link>
 					{user && (
 						<div
 							className={
@@ -160,6 +154,13 @@ function Event({ events, user }) {
 							/>
 						</div>
 					)}
+					<Link
+						to={`../category/events/${events[index].category}`}
+						className={styles.category_link}
+					>
+						{events[index].category}
+					</Link>
+
 					<h1 className={styles.title}>{events[index].title}</h1>
 					<p className={styles.date}>
 						{format(parseISO(events[index].createdAt), 'dd/MM/yyyy')}

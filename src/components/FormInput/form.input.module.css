@@ -41,7 +41,16 @@ label {
 
 @media screen and (max-width: 520px) {
 	.error_message {
-		font-size: 14px;
 		height: 100%;
+	}
+
+	.error_message * {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.error_message * {
+		font-size: 12px;
 	}
 }
