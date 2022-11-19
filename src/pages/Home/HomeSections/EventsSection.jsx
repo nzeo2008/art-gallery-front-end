@@ -6,7 +6,7 @@ import { api } from './../../../config';
 import LoadingSpinner from '../../LoadingSpinner/LoadingSpinner';
 
 function EventsSection({ events }) {
-	return events === 0 ? (
+	return events.length === 0 ? (
 		<LoadingSpinner />
 	) : (
 		<section className={styles.events_section}>
