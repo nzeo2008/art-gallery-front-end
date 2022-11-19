@@ -58,7 +58,9 @@ function TrendingSection({ exhibitions }) {
 					</div>
 				</div>
 			</div>
-			<Link to='exhibitions'>Смотреть все выставки</Link>
+			<div className={styles.link_wrapper}>
+				<Link to='exhibitions'>Смотреть все выставки</Link>
+			</div>
 		</section>
 	);
 }
