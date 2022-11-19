@@ -18,14 +18,18 @@ function Tags() {
 	const navigate = useNavigate();
 
 	const fetchArtists = useCallback(async () => {
-		const { data } = await getData(api.searchArtistTagsEndpoint, { tags: params.tags });
+		const { data } = await getData(api.searchArtistTagsEndpoint, {
+			tags: params.tags,
+		});
 
 		setArtists(data);
 		setIsArtistsLoading(false);
 	}, [params]);
 
 	const fetchExhibitions = useCallback(async () => {
-		const { data } = await getData(api.searchExhibitionTagsEndpoint, { tags: params.tags });
+		const { data } = await getData(api.searchExhibitionTagsEndpoint, {
+			tags: params.tags,
+		});
 
 		setExhibitions(data);
 		setIsExhibitionsLoading(false);
@@ -48,7 +52,11 @@ function Tags() {
 
 	return (
 		<>
-			<Banner from={params.tags} imagePath='/images/Free-image-1.jpg' altName={params.tags} />
+			<Banner
+				from={params.tags}
+				imagePath='/images/Free-image-1.jpg'
+				altName={params.tags}
+			/>
 			{!isArtistsLoading && !isExhibitionsLoading ? (
 				<section className={styles.main_container}>
 					<section className={styles.container}>
@@ -59,12 +67,14 @@ function Tags() {
 									return <ArtistCard key={artist._id} artist={artist} />;
 								})
 							) : (
-								<h3 className={styles.result}>К сожалению ничего не найдено...</h3>
+								<h3 className={styles.result}>
+									К сожалению ничего не найдено...
+								</h3>
 							)}
 						</div>
 					</section>
 					<section className={styles.container}>
-						<h2>Проводимыe выставки:</h2>
+						<h2>Проводимые выставки:</h2>
 						<div className={styles.cards_container}>
 							{exhibitions.length !== 0 ? (
 								exhibitions.map((exhibition) => {
@@ -76,7 +86,9 @@ function Tags() {
 									);
 								})
 							) : (
-								<h3 className={styles.result}>К сожалению ничего не найдено...</h3>
+								<h3 className={styles.result}>
+									К сожалению ничего не найдено...
+								</h3>
 							)}
 						</div>
 					</section>

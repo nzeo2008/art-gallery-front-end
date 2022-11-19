@@ -161,7 +161,6 @@
 	text-decoration: none;
 	color: var(--black);
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
 	margin-top: 60px;
 	transition: 0.25s all ease-in-out;
@@ -222,6 +221,22 @@
 	.event_container {
 		padding: 60px 20px;
 	}
+
+	.next_section_link h6 {
+		font-size: 18px;
+	}
+
+	.previous_section_link h6 {
+		font-size: 18px;
+	}
+
+	.arrow_container {
+		column-gap: 10px;
+	}
+
+	.arrow_container p {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -238,6 +253,9 @@
 	.bookmark_icon_container_black {
 		position: initial;
 	}
+	.next_section_link {
+		width: 600px;
+	}
 
 	.next_section_link h6 {
 		font-size: 16px;
@@ -251,17 +269,15 @@
 		font-size: 12px;
 	}
 
-	.arrow_container {
-		column-gap: 10px;
-	}
-
 	.arrow_container a:first-child {
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-start;
 	}
 	.arrow_container a:last-child {
 		display: flex;
 		flex-direction: column-reverse;
+		justify-content: flex-end;
 	}
 
 	.side_container {
